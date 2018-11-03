@@ -1,6 +1,5 @@
 import sys
 inFile = sys.argv[1]
-outFile = sys.argv[2]
 
 
 with open(inFile, 'r+') as rf:
@@ -14,7 +13,7 @@ with open(inFile, 'r') as rf:
         for i in ip_list:
             splited = i.split('/')
             ip = splited[0].split('.')
-            with open(outFile, 'a') as wf:
+            with open('output.txt', 'a') as wf:
                 for i in range(1, int(splited[1])+1):
                     ip[3] = str(i)
                     new = ''
