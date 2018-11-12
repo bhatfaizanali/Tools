@@ -1,0 +1,1082 @@
+
+
+
+
+
+
+***********PYTHON REFERENCE:
+
+
+https://www.w3schools.com/python/python_reference.asp
+
+
+______________________________________________________________________________
+
+
+
+
+
+
+
+#Python Numbers
+_______________
+
+There are three numeric types in Python:
+
+int
+float
+complex
+Variables of numeric types are created when you assign a value to them:
+
+Example
+x = 1    # int
+y = 2.8  # float
+z = 1j   # complex
+ 
+
+The type and class of variable can be found using method 'type()'
+ example:
+print(type(x))
+print(type(y))
+print(type(z))
+
+
+#Python Casting
+_______________
+
+*Specify a Variable Type:
+There may be times when you want to specify a type on to a variable. This can be done with casting. Python is an object-orientated language, and as such it uses classes to define data types, including its primitive types.
+
+Casting in python is therefore done using constructor functions:
+
+int() - constructs an integer number from an integer literal, a float literal (by rounding down to the previous whole number), or a string literal (providing the string represents a whole number)
+float() - constructs a float number from an integer literal, a float literal or a string literal (providing the string represents a float or an integer)
+str() - constructs a string from a wide variety of data types, including strings, integer literals and float literals
+Example
+Integers:
+
+x = int(1)   # x will be 1
+y = int(2.8) # y will be 2
+z = int("3") # z will be 3
+
+There is no inbuilt casting of python.
+
+
+#Python Strings
+_______________
+
+*String Literals:
+String literals in python are surrounded by either single quotation marks, or double quotation marks.
+
+'hello' is the same as "hello".
+
+Strings can be output to screen using the print function. For example: print("hello").
+
+Like many other popular programming languages, strings in Python are arrays of bytes representing unicode characters. However, Python does not have a character data type, a single character is simply a string with a length of 1. Square brackets can be used to access elements of the string.
+
+Example
+Get the character at position 1 (remember that the first character has the position 0):
+
+a = "Hello, World!"
+print(a[1])
+
+
+*Slicing:
+Example
+Substring. Get the characters from position 2 to position 5 (not included):
+
+b = "Hello, World!"
+print(b[2:5])
+
+*striping:
+Example
+The strip() method removes any whitespace from the beginning or the end:
+
+a = " Hello, World! "
+print(a.strip()) # returns "Hello, World!"
+
+*Finding Length:
+Example
+The len() method returns the length of a string:
+
+a = "Hello, World!"
+print(len(a))
+
+*Lower and Upper methods:
+
+_Example
+The lower() method returns the string in lower case:
+
+a = "Hello, World!"
+print(a.lower())
+
+_Example
+The upper() method returns the string in upper case:
+
+a = "Hello, World!"
+print(a.upper())
+
+*Replace method:
+
+Example
+The replace() method replaces a string with another string:
+
+a = "Hello, World!"
+print(a.replace("H", "J"))
+
+*Split method:
+
+Example
+The split() method splits the string into substrings if it finds instances of the separator:
+
+a = "Hello, World!"
+print(a.split(",")) # returns ['Hello', ' World!']
+
+
+
+#Python Collections (Arrays)
+________________________________
+There are four collection data types in the Python programming language:
+
+*List: is a collection which is ordered and changeable. Allows duplicate members.
+*Tuple: is a collection which is ordered and unchangeable. Allows duplicate members.
+*Set: is a collection which is unordered and unindexed. No duplicate members.
+*Dictionary: is a collection which is unordered, changeable and indexed. No duplicate members.
+When choosing a collection type, it is useful to understand the properties of that type. Choosing the right type for a particular data set could mean retention of meaning, and, it could mean an increase in efficiency or security.
+
+*List,Tuple and Set: 
+
+
+# Empty Lists
+empty_list = []
+empty_list = list()
+
+# Empty Tuples
+empty_tuple = ()
+empty_tuple = tuple()
+
+# Empty Sets
+empty_set = {} # This isn't right! It's a dict
+empty_set = set()
+
+
+
+
+
+
+-List
+A list is a collection which is ordered and changeable. In Python lists are written with square brackets.
+
+You access the list items by referring to the index number:
+
+Example
+Print the second item of the list:
+
+thislist = ["apple", "banana", "cherry"]
+print(thislist[1])
+
+
+Method	Description
+append()	Adds an element at the end of the list
+clear()	Removes all the elements from the list
+copy()	Returns a copy of the list
+count()	Returns the number of elements with the specified value
+extend()	Add the elements of a list (or any iterable), to the end of the current list
+index()	Returns the index of the first element with the specified value
+insert()	Adds an element at the specified position
+pop()	Removes the element at the specified position
+remove()	Removes the item with the specified value
+reverse()	Reverses the order of the list
+sort()	Sorts the list
+
+
+
+
+
+-Tuple
+A tuple is a collection which is ordered and unchangeable. In Python tuples are written with round brackets.
+Note: You cannot remove items in a tuple.
+Example
+Create a Tuple:
+
+thistuple = ("apple", "banana", "cherry")
+print(thistuple)
+Access Tuple Items
+You can access tuple items by referring to the index number:
+
+Example
+Return the item in position 1:
+
+thistuple = ("apple", "banana", "cherry")
+print(thistuple[1])
+
+
+Tuple Methods
+Python has two built-in methods that you can use on tuples.
+
+Method	Description
+count()	Returns the number of times a specified value occurs in a tuple
+index()	Searches the tuple for a specified value and returns the position of where it was found
+
+
+
+
+-Set
+A set is a collection which is unordered and unindexed. In Python sets are written with curly brackets.
+
+Example
+Create a Set:
+
+thisset = {"apple", "banana", "cherry"}
+print(thisset)
+Note: Sets are unordered, so the items will appear in a random order.
+
+Access Items
+You cannot access items in a set by referring to an index, since sets are unordered the items has no index.
+
+But you can loop through the set items using a for loop, or ask if a specified value is present in a set, by using the in keyword.
+
+Example
+Loop through the set, and print the values:
+
+thisset = {"apple", "banana", "cherry"}
+
+for x in thisset:
+  print(x)
+
+
+Set Methods
+Python has a set of built-in methods that you can use on sets.
+
+Method	Description
+add()	Adds an element to the set
+clear()	Removes all the elements from the set
+copy()	Returns a copy of the set
+difference()	Returns a set containing the difference between two or more sets
+difference_update()	Removes the items in this set that are also included in another, specified set
+discard()	Remove the specified item
+intersection()	Returns a set, that is the intersection of two other sets
+intersection_update()	Removes the items in this set that are not present in other, specified set(s)
+isdisjoint()	Returns whether two sets have a intersection or not
+issubset()	Returns whether another set contains this set or not
+issuperset()	Returns whether this set contains another set or not
+pop()	Removes an element from the set
+remove()	Removes the specified element
+symmetric_difference()	Returns a set with the symmetric differences of two sets
+symmetric_difference_update()	inserts the symmetric differences from this set and another
+union()	Return a set containing the union of sets
+update()	Update the set with the union of this set and others
+
+
+
+
+
+
+
+
+
+^^EXAMPLE CODE SNIPPETS:
+
+# Mutable
+list_1 = ['History', 'Math', 'Physics', 'CompSci']
+list_2 = list_1
+
+print(list_1)
+print(list_2)
+
+# list_1[0] = 'Art'
+
+# print(list_1)
+# print(list_2)
+
+
+# Immutable
+# tuple_1 = ('History', 'Math', 'Physics', 'CompSci')
+# tuple_2 = tuple_1
+
+# print(tuple_1)
+# print(tuple_2)
+
+# tuple_1[0] = 'Art'
+
+# print(tuple_1)
+# print(tuple_2)
+
+# Sets
+cs_courses = {'History', 'Math', 'Physics', 'CompSci'}
+
+print(cs_courses)
+
+
+# Empty Lists
+empty_list = []
+empty_list = list()
+
+# Empty Tuples
+empty_tuple = ()
+empty_tuple = tuple()
+
+# Empty Sets
+empty_set = {} # This isn't right! It's a dict
+empty_set = set()
+
+
+
+
+
+
+#Python Dictionaries
+________________________
+
+
+Dictionary
+A dictionary is a collection which is unordered, changeable and indexed. In Python dictionaries are written with curly brackets, and they have keys and values.
+
+Example
+Create and print a dictionary:
+
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict)
+Accessing Items
+You can access the items of a dictionary by referring to its key name:
+
+Example
+Get the value of the "model" key:
+
+x = thisdict["model"]
+There is also a method called get() that will give you the same result:
+
+Example
+Get the value of the "model" key:
+
+x = thisdict.get("model")
+
+
+
+^^EXAMPLE CODE SNIPPET:
+student = {'name': 'John', 'age': 25, 'courses': ['Math', 'CompSci']}
+
+for key, value in student.items():
+    print(key, value)
+
+
+
+
+Dictionary Methods
+Python has a set of built-in methods that you can use on dictionaries.
+
+Method	Description
+clear()	Removes all the elements from the dictionary
+copy()	Returns a copy of the dictionary
+fromkeys()	Returns a dictionary with the specified keys and values
+get()	Returns the value of the specified key
+items()	Returns a list containing the a tuple for each key value pair
+keys()	Returns a list contianing the dictionary's keys
+pop()	Removes the element with the specified key
+popitem()	Removes the last inserted key-value pair
+setdefault()	Returns the value of the specified key. If the key does not exist: insert the key, with the specified value
+update()	Updates the dictionary with the specified key-value pairs
+values()	Returns a list of all the values in the dictionary
+
+
+
+
+
+#Python Conditions and If statements
+______________________________________
+
+
+
+
+Python supports the usual logical conditions from mathematics:
+
+Equals: a == b
+Not Equals: a != b
+Less than: a < b
+Less than or equal to: a <= b
+Greater than: a > b
+Greater than or equal to: a >= b
+These conditions can be used in several ways, most commonly in "if statements" and loops.
+
+*An "if statement" is written by using the if keyword.
+
+Example
+If statement:
+
+a = 33
+b = 200
+if b > a:
+  print("b is greater than a")
+In this example we use two variables, a and b, which are used as part of the if statement to test whether b is greater than a. As a is 33, and b is 200, we know that 200 is greater than 33, and so we print to screen that "b is greater than a".
+
+
+*Elif:
+
+The elif keyword is pythons way of saying "if the previous conditions were not true, then try this condition".
+
+Example
+a = 33
+b = 33
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+In this example a is equal to b, so the first condition is not true, but the elif condition is true, so we print to screen that "a and b are equal".
+
+*Else:
+
+The else keyword catches anything which isn't caught by the preceding conditions.
+
+Example
+a = 200
+b = 33
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+else:
+  print("a is greater than b")
+In this example a is greater to b, so the first condition is not true, also the elif condition is not true, so we go to the else condition and print to screen that "a is greater than b".
+
+You can also have an else without the elif:
+
+Example
+a = 200
+b = 33
+if b > a:
+  print("b is greater than a")
+else:
+  print("b is not greater than a")
+
+
+**Short Hand If
+If you have only one statement to execute, you can put it on the same line as the if statement.
+
+Example
+
+
+**One line if statement:
+
+if a > b: print("a is greater than b")
+
+
+**Short Hand If ... Else
+If you have only one statement to execute, one for if, and one for else, you can put it all on the same line:
+
+Example
+One line if else statement:
+
+print("A") if a > b else print("B")
+
+You can also have multiple else statements on the same line:
+
+Example
+One line if else statement, with 3 conditions:
+
+print("A") if a > b else print("=") if a == b else print("B")
+
+
+**And
+The and keyword is a logical operator, and is used to combine conditional statements:
+
+Example
+Test if a is greater than b, AND if c is greater than a:
+
+if a > b and c > a:
+  print("Both conditions are True")
+
+
+**Or
+The or keyword is a logical operator, and is used to combine conditional statements:
+
+Example
+Test if a is greater than b, OR if a is greater than c:
+
+if a > b or a > c:
+  print("At least one of the conditions are True")
+
+
+
+
+
+#Python Loops
+______________
+
+
+Python has two primitive loop commands:
+
+**while loops
+**for loops
+
+*The while Loop:
+
+With the while loop we can execute a set of statements as long as a condition is true.
+
+Example
+Print i as long as i is less than 6:
+
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+
+
+
+*Python For Loops:
+
+A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).
+
+This is less like the for keyword in other programming language, and works more like an iterator method as found in other object-orientated programming languages.
+
+With the for loop we can execute a set of statements, once for each item in a list, tuple, set etc.
+
+Example
+Print each fruit in a fruit list:
+
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  print(x)
+
+__The for loop does not require an indexing variable to set beforehand.
+
+
+
+
+
+#Python Functions:
+__________________
+
+
+A function is a block of code which only runs when it is called.
+
+You can pass data, known as parameters, into a function.
+
+A function can return data as a result.
+
+**Creating a Function
+In Python a function is defined using the def keyword:
+
+Example
+def my_function():
+  print("Hello from a function")
+**Calling a Function
+To call a function, use the function name followed by parenthesis:
+
+Example
+def my_function():
+  print("Hello from a function")
+
+my_function()
+
+
+
+
+
+
+
+
+
+
+#Python Lambda
+________________
+A lambda function is a small anonymous function.
+
+A lambda function can take any number of arguments, but can only have one expression.
+
+Syntax
+	lambda arguments : expression
+The expression is executed and the result is returned:
+
+Example
+A lambda function that adds 10 to the number passed in as an argument, and print the result:
+
+x = lambda a : a + 10
+print(x(5))
+Lambda functions can take any number of arguments:
+
+Example
+A lambda function that multiplies argument a with argument b and print the result:
+
+x = lambda a, b : a * b
+print(x(5, 6))
+Example
+A lambda function that sums argument a, b, and c and print the result:
+
+x = lambda a, b, c : a + b + c
+print(x(5, 6, 2))
+ 
+**Why Use Lambda Functions?
+
+The power of lambda is better shown when you use them as an anonymous function inside another function.
+
+Say you have a function definition that takes one argument, and that argument will be multiplied with an unknown number:
+
+def myfunc(n):
+  return lambda a : a * n
+Use that function definition to make a function that always doubles the number you send in:
+
+Example
+def myfunc(n):
+  return lambda a : a * n
+
+mydoubler = myfunc(2)
+
+print(mydoubler(11))
+Or, use the same function definition to make a function that always triples the number you send in:
+
+Example
+def myfunc(n):
+  return lambda a : a * n
+
+mytripler = myfunc(3)
+
+print(mytripler(11))
+Or, use the same function definition to make both functions, in the same program:
+
+Example
+def myfunc(n):
+  return lambda a : a * n
+
+mydoubler = myfunc(2)
+mytripler = myfunc(3)
+
+print(mydoubler(11)) 
+print(mytripler(11))
+
+
+
+
+#Arrays in Python
+_________________
+
+
+Arrays and lists are both used in Python to store data, but they don't serve exactly the same purposes. They both can be used to store any data type (real numbers, strings, etc), and they both can be indexed and iterated through, but the similarities between the two don't go much further. The main difference between a list and an array is the functions that you can perform to them. For example, you can divide an array by 3, and each number in the array will be divided by 3 and the result will be printed if you request it. If you try to divide a list by 3, Python will tell you that it can't be done, and an error will be thrown.
+
+A list is a different kind of data structure from an array. The biggest difference is in the idea of direct access Vs sequential access. Arrays allow both; direct and sequential access, while lists allow only sequential access. And this is because the way that these data structures are stored in memory.
+
+
+Arrays are used to store multiple values in one single variable:
+
+Example
+Create an array containing car names:
+
+cars = ["Ford", "Volvo", "BMW"]
+What is an Array?
+An array is a special variable, which can hold more than one value at a time.
+
+If you have a list of items (a list of car names, for example), storing the cars in single variables could look like this:
+
+car1 = "Ford";
+car2 = "Volvo";
+car3 = "BMW";
+However, what if you want to loop through the cars and find a specific one? And what if you had not 3 cars, but 300?
+
+The solution is an array!
+
+An array can hold many values under a single name, and you can access the values by referring to an index number.
+
+Access the Elements of an Array
+You refer to an array element by referring to the index number.
+
+Example
+Get the value of the first array item:
+
+x = cars[0]
+Example
+Modify the value of the first array item:
+
+cars[0] = "Toyota"
+The Length of an Array
+Use the len() method to return the length of an array (the number of elements in an array).
+
+Example
+Return the number of elements in the cars array:
+
+x = len(cars)
+Note: The length of an array is always one more than the highest array index.
+
+
+Looping Array Elements
+You can use the for in loop to loop through all the elements of an array.
+
+Example
+Print each item in the cars array:
+
+for x in cars:
+  print(x)
+Adding Array Elements
+You can use the append() method to add an element to an array.
+
+Example
+Add one more element to the cars array:
+
+cars.append("Honda")
+Removing Array Elements
+You can use the pop() method to remove an element from the array.
+
+Example
+Delete the second element of the cars array:
+
+cars.pop(1)
+You can also use the remove() method to remove an element from the array.
+
+Example
+Delete the element that has the value "Volvo":
+
+cars.remove("Volvo")
+Note: The remove() method only removes the first occurrence of the specified value.
+
+Array Methods
+Python has a set of built-in methods that you can use on lists/arrays.
+
+Method	Description
+append()	Adds an element at the end of the list
+clear()	Removes all the elements from the list
+copy()	Returns a copy of the list
+count()	Returns the number of elements with the specified value
+extend()	Add the elements of a list (or any iterable), to the end of the current list
+index()	Returns the index of the first element with the specified value
+insert()	Adds an element at the specified position
+pop()	Removes the element at the specified position
+remove()	Removes the first item with the specified value
+reverse()	Reverses the order of the list
+sort()	Sorts the list
+
+
+__Note: Python does not have built-in support for Arrays, but Python Lists can be used instead.
+
+
+
+
+
+
+
+
+
+
+
+#Python Classes
+__________________
+
+
+Almost everything in Python is an object, with its properties and methods.
+
+A Class is like an object constructor, or a "blueprint" for creating objects.
+
+*Create a Class:
+
+To create a class, use the keyword class:
+
+Example
+Create a class named MyClass, with a property named x:
+
+class MyClass:
+  x = 5
+Create Object
+Now we can use the class named myClass to create objects:
+
+Example
+Create an object named p1, and print the value of x:
+
+p1 = MyClass()
+print(p1.x)
+
+
+*The __init__() Function
+
+
+The examples above are classes and objects in their simplest form, and are not really useful in real life applications.
+
+To understand the meaning of classes we have to understand the built-in __init__() function.
+
+All classes have a function called __init__(), which is always executed when the class is being initiated.
+
+Use the __init__() function to assign values to object properties, or other operations that are necessary to do when the object is being created:
+
+Example
+Create a class named Person, use the __init__() function to assign values for name and age:
+
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+p1 = Person("John", 36)
+
+print(p1.name)
+print(p1.age)
+Note: The __init__() function is called automatically every time the class is being used to create a new object.
+
+
+*Object Methods
+
+Objects can also contain methods. Methods in objects are functions that belongs to the object.
+
+Let us create a method in the Person class:
+
+Example
+Insert a function that prints a greeting, and execute it on the p1 object:
+
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+  def myfunc(self):
+    print("Hello my name is " + self.name)
+
+p1 = Person("John", 36)
+p1.myfunc()
+Note: The self parameter is a reference to the class instance itself, and is used to access variables that belongs to the class.
+
+The self Parameter
+The self parameter is a reference to the class itself, and is used to access variables that belongs to the class.
+
+It does not have to be named self , you can call it whatever you like, but it has to be the first parameter of any function in the class:
+
+Example
+Use the words mysillyobject and abc instead of self:
+
+class Person:
+  def __init__(mysillyobject, name, age):
+    mysillyobject.name = name
+    mysillyobject.age = age
+
+  def myfunc(abc):
+    print("Hello my name is " + abc.name)
+
+p1 = Person("John", 36)
+p1.myfunc()
+Modify Object Properties
+You can modify properties on objects like this:
+
+Example
+Set the age of p1 to 40:
+
+p1.age = 40
+Delete Object Properties
+You can delete properties on objects by using the del keyword:
+
+Example
+Delete the age property from the p1 object:
+
+del p1.age
+Delete Objects
+You can delete objects by using the del keyword:
+
+Example
+Delete the p1 object:
+
+del p1
+
+^^Code snippets:
+https://github.com/CoreyMSchafer/code_snippets/tree/master/Object-Oriented
+
+
+
+
+										File Handling
+_____________________________________________________________________________________________________________________________________________________________________
+
+^^Code snippets:
+https://github.com/CoreyMSchafer/code_snippets/blob/master/Python-Files/Files.py
+
+
+
+File Handling
+The key function for working with files in Python is the open() function.
+
+The open() function takes two parameters; filename, and mode.
+
+There are four different methods (modes) for opening a file:
+
+"r" - Read - Default value. Opens a file for reading, error if the file does not exist
+
+"a" - Append - Opens a file for appending, creates the file if it does not exist
+
+"w" - Write - Opens a file for writing, creates the file if it does not exist
+
+"x" - Create - Creates the specified file, returns an error if the file exists
+
+In addition you can specify if the file should be handled as binary or text mode
+
+"t" - Text - Default value. Text mode
+
+"b" - Binary - Binary mode (e.g. images)
+
+Syntax
+To open a file for reading it is enough to specify the name of the file:
+
+f = open("demofile.txt")
+The code above is the same as:
+
+f = open("demofile.txt", "rt")
+Because "r" for read, and "t" for text are the default values, you do not need to specify them.
+
+Note: Make sure the file exists, or else you will get an error.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+***********Open a File on the Server*************
+
+
+Asume we have the following file, located in the same folder as Python:
+
+
+
+demofile.txt
+
+Hello! Welcome to demofile.txt
+This file is for testing purposes.
+Good Luck!
+To open the file, use the built-in open() function.
+
+
+
+
+The open() function returns a file object, which has a read() method for reading the content of the file:
+
+Example
+f = open("demofile.txt", "r")
+print(f.read())
+Read Only Parts of the File
+By default the read() method returns the whole text, but you can also specify how many character you want to return:
+
+Example
+Return the 5 first characters of the file:
+
+f = open("demofile.txt", "r")
+print(f.read(5))
+ 
+Read Lines
+You can return one line by using the readline() method:
+
+Example
+Read one line of the file:
+
+f = open("demofile.txt", "r")
+print(f.readline())
+By calling readline() two times, you can read the two first lines:
+
+Example
+Read two lines of the file:
+
+f = open("demofile.txt", "r")
+print(f.readline())
+print(f.readline())
+By looping through the lines of the file, you can read the whole file, line by line:
+
+Example
+Loop through the file line by line:
+
+f = open("demofile.txt", "r")
+for x in f:
+  print(x)
+
+
+
+
+
+
+
+
+
+
+**********************************Python File Write**********************
+
+
+Write to an Existing File
+To write to an existing file, you must add a parameter to the open() function:
+
+"a" - Append - will append to the end of the file
+
+"w" - Write - will overwrite any existing content
+
+Example
+Open the file "demofile.txt" and append content to the file:
+
+f = open("demofile.txt", "a")
+f.write("Now the file has one more line!")
+Example
+Open the file "demofile.txt" and overwrite the content:
+
+f = open("demofile.txt", "w")
+f.write("Woops! I have deleted the content!")
+Note: the "w" method will overwrite the entire file.
+
+Create a New File
+To create a new file in Python, use the open() method, with one of the following parameters:
+
+"x" - Create - will create a file, returns an error if the file exist
+
+"a" - Append - will create a file if the specified file does not exist
+
+"w" - Write - will create a file if the specified file does not exist
+
+Example
+Create a file called "myfile.txt":
+
+f = open("myfile.txt", "x")
+Result: a new empty file is created!
+
+Example
+Create a new file if it does not exist:
+
+f = open("myfile.txt", "w")
+
+
+
+
+
+
+************************Python Delete File*****************
+
+
+
+Delete a File
+To delete a file, you must import the OS module, and run its os.remove() function:
+
+Example
+Remove the file "demofile.txt":
+
+import os
+os.remove("demofile.txt")
+Check if File exist:
+To avoid getting an error, you might want to check if the file exist before you try to delete it:
+
+Example
+Check if file exist, then delete it:
+
+import os
+if os.path.exists("demofile.txt"):
+  os.remove("demofile.txt")
+else:
+  print("The file does not exist")
+Delete Folder
+To delete an entire folder, use the os.rmdir() method:
+
+Example
+Remove the folder "myfolder":
+
+import os
+os.rmdir("myfolder")
+Note: You can only remove empty folders.
+
+
